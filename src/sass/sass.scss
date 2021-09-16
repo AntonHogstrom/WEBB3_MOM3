@@ -1,0 +1,38 @@
+/*Import normalize*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" );
+//font import
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&display=swap');
+
+//Variable declarations
+
+//Colors
+$background: rgb(49, 72, 134);
+$background_light: lighten($background, 20%);
+$background_dark: darken($background, 20%);
+
+$background1: adjust-hue($background, 40);
+$background1_light: lighten($background1, 20%);
+$background1_dark: darken($background1, 20%);
+
+$text: rgb(109, 177, 165);
+$text_light: lighten($text, 20%);
+$text_dark: darken($text, 60%);
+
+//fonts
+$header_font: 'Anton', sans-serif;
+$text_font: 'Roboto Condensed', sans-serif;
+
+//heights
+$header_height: 200px;
+$footer_height: 100px;
+
+
+$border: 2px solid $text;
+
+//Import partials
+@import 'core';
+@import 'reusables';
+@import 'text';
+@import 'header';
+@import 'main';
+@import 'footer';

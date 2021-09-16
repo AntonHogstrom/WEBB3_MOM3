@@ -1,0 +1,64 @@
+body {
+    max-width: 1400px;
+    margin: auto;
+    background-color: $background_light;
+    font-family: $text_font;
+    color: $text_dark;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $text_dark;
+}
+picture {
+    display: block;
+}
+img {
+    width: 100%;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.4em;
+}
+h6 {
+    font-size: 1.2em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header_font;
+}
+p {
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.bold {
+    font-size: 800;
+}
+
+/*Dark / Light theme*/
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: $background1_dark;
+        color: $text;
+    }
+    header nav ul li a {
+        background-color: $background_dark;
+        color: $text;
+    }
+    main #banner .banner_heading {
+        color: $text_dark;
+    }
+}

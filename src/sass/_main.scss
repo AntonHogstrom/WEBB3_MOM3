@@ -1,0 +1,107 @@
+#banner  {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(0deg, $background_dark 0%, $background 70%, $background_light 100%);
+
+    picture {
+        opacity: 0.4;
+        @media all and (max-width: 860px) {
+            width: 1000px;
+        }
+    }
+    .banner_heading {
+        z-index: 2000;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 25%;
+        text-align: center;
+        color: $text_light;
+    }
+}
+.boxDiv {
+    margin: 30px 10px;
+    @include flex;
+    flex-wrap: wrap;
+
+
+    div {
+        background-color: $background1_light;
+        margin: 15px;
+        display: grid;
+
+        span {
+            z-index: 2000;
+            align-self: center;
+            text-align: center;
+            font-size: 22px;
+            color: $text_dark;
+
+        }
+        picture, span {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        picture {
+            overflow: hidden;
+            @include box;
+            @include grid_center;
+            img {
+                width: 500px;
+            }
+            :hover {
+                filter: grayscale(60%) blur(2px);
+
+            }
+        }
+    }
+}
+
+#textSection {
+    max-width: 100ch;
+    margin: 20px auto 50px auto;
+    border-left: 4px solid $text_dark;
+
+    article {
+        max-width: 80ch;
+        margin: auto;
+        border-left: 4px solid $text_dark;
+        padding: 0 10px 5px 20px;
+    }
+}
+
+
+#banner_login {
+    @extend #banner;
+
+    @media all and (max-width: 860px) {
+        height: 300px;
+    }
+
+    @media all and (max-width: 430px) {
+        height: 500px;
+    }
+
+    span {
+        @extend .banner_heading;
+        top: 8%;
+    }
+    #profile_div {
+        @extend .banner_heading;
+        @include flex;
+        flex-wrap: wrap;
+
+        .profile {
+            height: 75px;
+            width: 75px;
+            z-index: 2000;
+            background-color: $text_light;
+            margin: 5px;
+            border-radius: 5px;
+            img {
+                border-radius: 5px;
+            }
+        }
+    }
+}
