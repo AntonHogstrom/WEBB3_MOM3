@@ -28,8 +28,9 @@
 
     div {
         background-color: $background1_light;
-        margin: 15px;
         display: grid;
+        margin: 15px;
+        border-radius: 50%;
 
         span {
             z-index: 2000;
@@ -45,7 +46,8 @@
         }
         picture {
             overflow: hidden;
-            @include box;
+            @include box($circle: true);
+
             @include grid_center;
             img {
                 width: 500px;
